@@ -1,67 +1,151 @@
+/* Light Mode */
 /* Latte */
 :root {
-    --color-text-primary: #4c4f69; /* Text */
-    --color-text-secondary: #5c5f77; /* Subtext1 */
-    --color-text-tertiary: #6c6f85; /* Subtext0 */
-    --color-text-inversion: #eff1f5; /* Base */
-    --color-shape-primary: #7c7f93; /* Overlay2 */
-    --color-shape-secondary: #ccd0da; /* Surface0 */
-    --color-shape-tertiary: #ccd0da; /* Surface0 */
-    --color-shape-highlight-medium: rgba(76, 79, 105, 0.08); /* Text */
-    --color-shape-highlight-light: rgba(76, 79, 105, 0.04); /* Text */
-    --color-control-accent: #8839ef; /* Mauve */
-    --color-control-active: #1e66f5; /* Blue */
-    --color-control-inactive: #dce0e8; /* Crust */
-    --color-control-bg: #eff1f5; /* Base */
-    --color-bg-primary: #eff1f5; /* Base */
-    --color-bg-loader: rgba(188, 192, 204, 0.7); /* Surface1 */
-    --color-system-accent-100: #df8e1d; /* Yellow */
-    --color-system-accent-50: #fe640b; /* Peach */
-    --color-system-accent-25: #dd7878; /* Flamingo */
-    --color-system-selection: rgba(4, 165, 229, 0.15); /* Sky */
-    --color-system-drop-zone: rgba(220, 138, 120, 0.25); /* Rosewater */
-    --color-yellow: #df8e1d; /* Yellow */
-    --color-orange: #fe640b; /* Peach */
-    --color-red: #d20f39; /* Red */
-    --color-pink: #ea76cb; /* Pink */
-    --color-purple: #8839ef; /* Mauve */
-    --color-blue: #1e66f5; /* Blue */
-    --color-ice: #04a5e5; /* Sky */
-    --color-teal: #179299; /* Teal */
-    --color-lime: #40a02b; /* Green */
-    --color-green: #66B395; /* Original value for Green */
+    /* Text Colors */
+    --color-text-primary: var(--color-text); /* Text */
+    --color-text-secondary: var(--color-subtext1); /* Subtext1 */
+    --color-text-tertiary: var(--color-subtext0); /* Subtext0 */
+
+    --color-text-inversion: var(--color-crust); /* Crust */
+
+    /* Shape */
+    --color-shape-primary: var(--color-overlay0); /* Overlay0 */
+    --color-shape-secondary: var(--color-surface1); /* Surface1 */
+    --color-shape-tertiary: var(--color-surface0); /* Surface0 */
+
+    --color-shape-highlight-medium: rgba(92, 95, 119, 0.12); /* Subtext1 with opacity */
+    --color-shape-highlight-light: rgba(92, 95, 119, 0.06); /* Subtext1 with lower opacity */
+    --color-shape-highlight-light-solid: var(--color-base); /* Base */
+
+    /* Control */
+    --color-control-accent: var(--color-green); /* Green */
+    --color-control-active: var(--color-subtext0); /* Subtext0 */
+    --color-control-inactive: var(--color-surface2); /* Surface2 */
+    --color-control-bg: #ffffff; /* White */
+
+    /* Background */
+    --color-bg-primary: var(--color-mantle); /* Mantle */
+    --color-bg-secondary: var(--color-base); /* Base */
+    --color-bg-tertiary: var(--color-surface1); /* Surface1 */
+    --color-bg-loader: rgba(220, 224, 232, 0.7); /* Crust with opacity */
+
+    /* System */
+    --color-system-accent-50: var(--color-flamingo); /* Flamingo */
+    --color-system-accent-25: var(--color-peach); /* Peach */
+    --color-system-selection: rgba(30, 102, 245, 0.15); /* Blue with opacity */
+
+    --color-rosewater: #dc8a78;
+    --color-flamingo: #dd7878;
+    --color-pink: #ea76cb;
+    --color-mauve: #8839ef;
+    --color-red: #d20f39;
+    --color-maroon: #e64553;
+    --color-peach: #fe640b;
+    --color-yellow: #df8e1d;
+    --color-green: #40a02b;
+    --color-teal: #179299;
+    --color-sky: #04a5e5;
+    --color-sapphire: #209fb5;
+    --color-blue: #1e66f5;
+    --color-lavender: #7287fd;
+    --color-text: #4c4f69;
+    --color-subtext1: #5c5f77;
+    --color-subtext0: #6c6f85;
+    --color-overlay2: #7c7f93;
+    --color-overlay1: #8c8fa1;
+    --color-overlay0: #9ca0b0;
+    --color-surface2: #acb0be;
+    --color-surface1: #bcc0cc;
+    --color-surface0: #ccd0da;
+    --color-base: #eff1f5;
+    --color-mantle: #e6e9ef;
+    --color-crust: #dce0e8;
 }
 
+body {
+    font-family: "SN Pro", "Roboto", "FiraCode", "Plex", "Inter";
+}
+
+/* Other customize */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+    background-color: transparent;
+    position: absolute;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #6c6f85; /* Subtext0 */
+  border-radius: 6px;
+}
+
+/* Dark Mode */
+/* Uncomment one only for dark mode, default is mocha */
 /* Mocha */
 html.themeDark {
+    /* Text Colors */
     --color-text-primary: #cdd6f4; /* Text */
     --color-text-secondary: #bac2de; /* Subtext1 */
     --color-text-tertiary: #a6adc8; /* Subtext0 */
-    --color-text-inversion: #1e1e2e; /* Base */
-    --color-shape-primary: #9399b2; /* Overlay2 */
-    --color-shape-secondary: #313244; /* Surface0 */
+
+    --color-text-inversion: #11111b; /* Crust */
+
+    /* Shape */
+    --color-shape-primary: #6c7086; /* Overlay0 */
+    --color-shape-secondary: #45475a; /* Surface1 */
     --color-shape-tertiary: #313244; /* Surface0 */
-    --color-shape-highlight-medium: rgba(147, 153, 178, 0.08); /* Overlay2 */
-    --color-shape-highlight-light: rgba(147, 153, 178, 0.04); /* Overlay2 */
-    --color-control-accent: #cba6f7; /* Mauve */
-    --color-control-active: #89b4fa; /* Blue */
-    --color-control-inactive: #11111b; /* Crust */
-    --color-control-bg: #1e1e2e; /* Base */
-    --color-bg-primary: #1e1e2e; /* Base */
-    --color-bg-loader: rgba(17, 17, 27, 0.7); /* Crust */
-    --color-system-accent-100: #f9e2af; /* Yellow */
-    --color-system-accent-50: #fab387; /* Peach */
-    --color-system-accent-25: #f2cdcd; /* Flamingo */
-    --color-system-selection: rgba(137, 220, 235, 0.15); /* Sky */
-    --color-system-drop-zone: rgba(245, 224, 220, 0.25); /* Rosewater */
-    --color-yellow: #f9e2af; /* Yellow */
-    --color-orange: #fab387; /* Peach */
-    --color-red: #f38ba8; /* Red */
-    --color-pink: #f5c2e7; /* Pink */
-    --color-purple: #cba6f7; /* Mauve */
-    --color-blue: #89b4fa; /* Blue */
-    --color-ice: #89dceb; /* Sky */
-    --color-teal: #94e2d5; /* Teal */
-    --color-lime: #a6e3a1; /* Green */
-    --color-green: #a6e3a1; /* Green */
-}
+
+    --color-shape-highlight-medium: rgba(92, 95, 119, 0.12); /* Subtext1 with opacity */
+    --color-shape-highlight-light: rgba(92, 95, 119, 0.06); /* Subtext1 with lower opacity */
+    --color-shape-highlight-light-solid: #1e1e2e; /* Base */
+
+    /* Control */
+    --color-control-accent: #a6e3a1; /* Green */
+    --color-control-active: #a6adc8; /* Subtext0 */
+    --color-control-inactive: #585b70; /* Surface2 */
+    --color-control-bg: #ffffff; /* White */
+
+    /* Background */
+    --color-bg-primary: #181825; /* Mantle */
+    --color-bg-secondary: #1e1e2e; /* Base */
+    --color-bg-tertiary: #45475a; /* Surface1 */
+    --color-bg-loader: rgba(17, 17, 27, 0.7); /* Crust with opacity */
+
+    /* System */
+    --color-system-accent-50: #f38ba8; /* Red */
+    --color-system-accent-25: #fab387; /* Peach */
+    --color-system-selection: rgba(30, 102, 245, 0.15); /* Blue with opacity */
+
+    --color-rosewater: #f5e0dc;
+    --color-flamingo: #f2cdcd;
+    --color-pink: #f5c2e7;
+    --color-mauve: #cba6f7;
+    --color-red: #f38ba8;
+    --color-maroon: #eba0ac;
+    --color-peach: #fab387;
+    --color-yellow: #f9e2af;
+    --color-green: #a6e3a1;
+    --color-teal: #94e2d5;
+    --color-sky: #89dceb;
+    --color-sapphire: #74c7ec;
+    --color-blue: #89b4fa;
+    --color-lavender: #b4befe;
+    --color-text: #cdd6f4;
+    --color-subtext1: #bac2de;
+    --color-subtext0: #a6adc8;
+    --color-overlay2: #9399b2;
+    --color-overlay1: #7f849c;
+    --color-overlay0: #6c7086;
+    --color-surface2: #585b70;
+    --color-surface1: #45475a;
+    --color-surface0: #313244;
+    --color-base: #1e1e2e;
+    --color-mantle: #181825;
+    --color-crust: #11111b;
+
+    ::-webkit-scrollbar-thumb {
+        background-color: #a6adc8; /* Subtext0 */
+    }
+  }
+
+
